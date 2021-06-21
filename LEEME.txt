@@ -1,0 +1,44 @@
+Les dejo algunos comentarios que podrían ser de utilidad al momento de replicar/revisar el proyecto en su ambiente local
+
+- Para el desarrollo del proyecto utilcé WAMP y en la carpeta de WWW nombré al proyecto (o la carpeta de instalación de WP) "mijobrands.com"
+
+- Acostumbro a utilizar un prefijo de la BD distinto a wp_ o al menos agregar algo más, en este caso es wp_mijo_
+
+- Para entrar al admin de WP es:
+-- user: mijobrands_admin
+-- pass: M14m 
+
+- Todo el contenido del home es mandado a llamar desde WP
+
+- El contenido del primer bloque viene del editor de la página de Inicio
+
+- En la sección de nosotros llamo el extracto de la página Nosotros y tiene su link de leer más que lleva al page.php
+
+- La sección de servicios es una consulta a las tres entradas más recientes bajo la categoría de Servicios y tienen su link de leer más que lleva al single.php
+
+- La sección de blog es una consulta a la entrada más reciente bajo la categoría de Blog y tiene su link de leer más que lleva al single.php
+
+- page.php y single.php tienen la misma estructura y estilo
+
+- El formulario de contacto es sencillo, aunque funcional; valida que hayas ingresado nombre y correo y mediante alert() te notifica lo que ocurre
+-- Es un componente hecho en Vue
+-- Me apoyo con la librería PHPMailer
+-- El envío se hace con AJAX
+-- Utilizo Gmail para el envío, cabe la posibilidad que si lo usan llegue el mensaje a spam o promociones (así me pasó las primeras veces en lo que hacía pruebas) y llega con el asunto "Landing page - prueba técnica web developer"
+
+- La caja de búsqueda arroja resultados en un formato sencillo, pero sin problema te realiza la búsqueda
+
+- El menú de navegación es dinámico, se pueden agregar más elementos, aunque los existentes tienen función de navegación con anclas a los bloques que ya están programados en el home, por lo que si se agrega un nuevo elemento al menú como "Testimonios" tendría que ser una página o un elemento externo pues no incluí funcionalidad en el home de agregar una nueva sección (extrañé en esta parte a AFC)
+
+- En todo momento intenté utilizar las ventajas de SASS para el estilo
+-- El preprocesador que uso es Prepros
+
+- Para el JS tengo funciones en Vanilla y otras con jQuery
+
+- Aunque consideré 4 breakpoints (_variables.scss) para la versión responsive, al final hago uso sólo de medidas de tablet y celular. Por el diseño tiende a acomodarse bien en el resto de pantallas en esos 2 breakpoints
+
+- Les recomiendo forzar un 404
+
+Nota: en el gitignore trato de sólo incluir únicamente lo necesario para la revisión, si algo se me pasó les pido disculpas.
+
+

@@ -1,0 +1,22 @@
+/*Medidas de contenedores*/
+$desktop-width: 966px;
+$tablet-width: 800px;
+$mobile-width: 600px;
+$smaller-width: 400px;
+
+/*Colores*/
+$bg-body: #FFFFFF;
+$support-color: #F7FAFC;
+$text-color: #7F8DA1;
+$title-color1: #2D3748;
+$title-color2: #000000; 
+$link-color: #2D3748;
+$link-hover-color: #E62027;
+$link-nav-color: #000000;
+$btn-bg-color: #6B46C1;
+$btn-color: #FFFFFF;
+$placeholder-color: #718096;
+
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+$fuente-principal: 'Inter', sans-serif;

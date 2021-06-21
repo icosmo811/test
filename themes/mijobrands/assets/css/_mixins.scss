@@ -1,0 +1,114 @@
+// Contenedor principal
+.contenedor {
+	width: $desktop-width;
+	display: block;
+	overflow: hidden; 
+	clear: both;
+	margin: 0 auto;
+
+	@media (max-width: $tablet-width) {
+		width: 100%;
+		padding: 0 2rem !important;
+	}
+}
+
+// Sistema de columnas
+.col-3 {
+	display: flex;
+	justify-content: space-between;
+
+	@media (max-width: $mobile-width) {
+		flex-direction: column;
+	}
+
+	.col {
+		width: 31%;
+
+		@media (max-width: $mobile-width) {
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.col-2 {
+	display: flex;
+	// align-items: stretch;
+	@media (max-width: $mobile-width) {
+		flex-direction: column;
+	}
+
+	.col {
+		width: 50%;
+
+		@media (max-width: $mobile-width) {
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.col-2-mod {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: $mobile-width) {
+		flex-direction: column;
+	}
+
+	.col:nth-child(odd) {
+		width: 55%;
+	}
+
+	.col:nth-child(even) {
+		width: 45%;
+	}
+
+	.col {
+		@media (max-width: $mobile-width) {
+			width: 100% !important;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+// Contenedores con sombra
+@mixin redondea($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin fancy-box-shadow {
+	box-shadow: 0px 5px 4px rgba(221, 221, 221, 0.25);
+}
+
+@mixin gray-fancy-box {
+	@include redondea;
+	border:1px solid #E2E2E2;
+	@include fancy-box-shadow;
+}
+
+// Animación
+@mixin transicion($tiempo: 0.5s, $efecto: ease-in-out) {
+	-webkit-transition: all $tiempo $efecto;
+	   -moz-transition: all $tiempo $efecto;
+		 -o-transition: all $tiempo $efecto;
+		    transition: all $tiempo $efecto; 
+}
+
+// Utilidades
+.u-padding {
+	padding: 1rem 0;
+}
+.u-margin {
+	margin: 2rem auto;
+}
+
+a {
+
+	&:hover {
+		color: $link-hover-color;
+		@include transicion();
+	}
+}

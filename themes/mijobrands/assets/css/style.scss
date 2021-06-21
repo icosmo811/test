@@ -1,0 +1,169 @@
+/*
+Theme Name: Mijo! Brands - prueba técnica
+Theme URI: http://www.solucioneshipermedia.com/portafolio/
+Author: Carlos Ochoa
+Author URI: https://github.com/icosmo811
+Description: Tema desarrollado como parte de la prueba técnica para la vacante de web developer en la agencia digital Mijo! Brands
+Version: 1.0.0
+Text Domain: mijobrands
+*/ 
+
+
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_global.scss";
+@import "_header.scss";
+@import "_nav.scss";
+@import "_footer.scss";
+@import "_page.scss";
+
+.home_inicio {
+	// margin-bottom: 1rem;
+	h1 {
+		@media (max-width: $mobile-width) {
+			font-size: 3.5rem !important;
+		}
+	}
+	h2 {
+		@media (max-width: $mobile-width) {
+			font-size: 3rem !important;
+		}
+	}
+	h3 {
+		@media (max-width: $mobile-width) {
+			font-size: 2rem !important;
+		}
+	}
+
+	img {
+		@media (max-width: $mobile-width) {
+			width: 100% !important;
+			height: auto !important;
+		}
+	}
+}
+
+.home_nosotros {
+	@include gray_fancy_box;
+
+	@media (max-width: $tablet-width) {
+		padding: 2rem  0;
+	}
+
+	@media (max-width: $mobile-width) {
+		padding: 1rem 2rem 0rem;
+	}
+
+	&_contenido {
+		padding: 0 2rem;
+
+		@media (max-width: $mobile-width) {
+			padding: 0;
+		}
+	}
+
+	&_titulo {
+		font-size: 1.8rem;
+		margin-top: 0;
+	}
+
+	figure {
+		line-height: 0;
+	}
+}
+
+.home_servicios {
+
+	&_servicio {
+		@include gray_fancy_box;
+
+		&_titulo {
+			font-size: 1.25rem;
+			margin-top: 0;
+		}
+
+		&_contenido {
+			padding: 1rem;
+		}
+	}
+}
+
+.home_blog {
+	background: $support-color;
+
+	&_contenido {
+		padding: 6rem 2rem;
+
+		@media (max-width: $mobile-width) {
+			padding: 1rem 0;
+		}
+
+		&_titulo {
+			font-size: 2.5rem;
+			margin-top: 0;
+		}
+
+		&_excerpt {
+
+			.excerpt, .fecha, .leerMas {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	&_imagen {
+		background-size: cover;
+
+		@media (max-width: $mobile-width) {
+			display: none;
+		}
+
+		figure {
+			// height: 100%;
+
+			img {
+				// height: 100%;
+			}
+		}
+	}
+}
+
+.home_contacto {
+	padding: 0rem 8rem;
+
+	h2 {
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	form {
+
+		div {
+			margin-bottom: 2rem;
+
+			label {
+				display: block;
+				margin-bottom: 1rem;
+				color: $title-color2;
+				font-size: 1.3rem;
+			}
+
+			input, textarea {
+				font-family: inherit;
+				font-size: 1rem;
+				width: 100%;
+				padding: 1rem;
+			}
+
+			input[type="submit"] {
+				background: $link-hover-color;
+				color: #ffffff;
+				border: none;
+				font-size: 1.2rem;
+				max-width: 50%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}

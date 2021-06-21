@@ -1,0 +1,41 @@
+* { 
+	box-sizing: Border-box 
+}
+
+body {
+	font-family: $fuente-principal;
+	background: $bg-body;
+	color: $text-color;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+	color: $title-color1;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.excerpt {
+	font-size: .875rem;
+}
+.excerpt_meta {
+	display: flex;
+}
+.fecha, .leerMas {
+	font-size: .75rem;
+	flex: 1;
+}
+.leerMas {
+	text-align: right;
+	font-weight: bold;
+}

@@ -1,0 +1,85 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 0;
+	position: relative;
+
+	@media (max-width: $mobile-width) {
+		flex-direction: column-reverse;
+	}
+
+	&_logo {
+
+		h1 {
+			margin: 0;
+			font-size: 1.25rem;
+
+			a {
+				color: $link-hover-color;
+			}
+		} 
+	} 
+
+	&_search {
+		@media (max-width: $mobile-width) {
+			margin-bottom: 1rem;
+		}
+
+		&_form, i {
+			display: inline;
+		}
+
+		i {
+			color: $link-nav-color;
+			margin-right: .5rem;
+		}
+
+		&_form {
+			@media (max-width: $mobile-width) {
+				max-width: 80px;
+				display: inline-block;
+				overflow: hidden;
+				vertical-align: middle;
+			}
+
+			input {
+				border: none;
+				font-size: 1rem;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+
+	&_nav {
+		@media (max-width: $tablet-width) {
+			display: none;
+		}
+	}
+
+	#menu_responsive {
+		display: none;
+		color: $title-color1;
+		font-size: 2rem;
+
+		@media (max-width: $tablet-width) {
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background: $bg-body;
+}

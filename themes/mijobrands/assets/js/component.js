@@ -1,0 +1,3 @@
+Vue.component('contact-form', {
+  template: '<form><div><input id="form-nombre" type="text" name="nombre" placeholder="Nombre" requiered></div><div><input id="form-correo" type="mail" name="correo" placeholder="Correo" requiered></div><div><textarea id="form-mensaje" name="mensaje" placeholder="Mensaje"></textarea></div><div><input id="contact-form-enviar" type="submit" name="enviar" value="Enviar"></div></form>'
+});

@@ -1,0 +1,32 @@
+.pagina {
+
+	&_thumbnail {
+		max-height: 380px;
+		overflow: hidden;
+	}
+
+	&_titulo {
+		font-size: 2.8rem;
+		margin-bottom: 0;
+	}
+
+	&_meta {
+		border-bottom: 1px solid #E8E7E7;
+
+		h3, p {
+			display: inline-block;
+		}
+
+		h3 {
+			margin-right: 3rem;
+		}
+	}
+
+	section {
+		padding: 0 6rem 3rem;
+
+		@media (max-width: $mobile-width) {
+			padding: 0 0 2rem;
+		}
+	}
+}
